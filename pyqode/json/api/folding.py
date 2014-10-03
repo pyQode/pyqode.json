@@ -13,5 +13,4 @@ class JSONFoldDetector(FoldDetector):
                 return TextBlockHelper.get_fold_lvl(prev_block) + 1
             if prev_text.replace(',', '').endswith(('}', ']')):
                 return TextBlockHelper.get_fold_lvl(prev_block) - 1
-        print(text, TextBlockHelper.get_fold_lvl(prev_block))
         return TextBlockHelper.get_fold_lvl(prev_block)
