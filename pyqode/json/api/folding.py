@@ -7,7 +7,6 @@ class JSONFoldDetector(FoldDetector):
             prev_text = prev_block.text().strip()
         else:
             prev_text = ''
-        text = block.text()
         if '[]' not in prev_text and '{}' not in prev_text:
             if prev_text.endswith(('{', '[')):
                 return TextBlockHelper.get_fold_lvl(prev_block) + 1

@@ -20,7 +20,7 @@ class Window(QtWidgets.QMainWindow):
         self.setCentralWidget(self.editor)
         self.editor.file.open(
             os.path.abspath(os.path.join(
-                '..', 'test', 'files', 'masterdice.json')))
+                '..', 'test', 'files', 'example.json')))
 
 
 logging.basicConfig(level=logging.INFO)
