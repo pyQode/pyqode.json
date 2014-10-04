@@ -1,9 +1,11 @@
 """
 JSON specific modes
 """
-from .sh import  JSONSyntaxHighlighter
+from .autoindent import AutoIndentMode
+from .sh import JSONSyntaxHighlighter
 
 
 __all__ = [
+    'AutoIndentMode',
     'JSONSyntaxHighlighter'
 ]

@@ -37,7 +37,7 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.ZoomMode())
         self.modes.append(modes.CodeCompletionMode())
         self.modes.append(modes.AutoIndentMode())
-        self.modes.append(modes.IndenterMode())
+        self.modes.append(json_modes.AutoIndentMode())
         self.modes.append(modes.SymbolMatcherMode())
         self.modes.append(modes.OccurrencesHighlighterMode())
         self.modes.append(modes.SmartBackSpaceMode())
