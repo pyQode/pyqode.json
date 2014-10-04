@@ -7,6 +7,6 @@ class AutoIndentMode(modes.AutoIndentMode):
         pre, post = super(AutoIndentMode, self)._get_indent(cursor)
         if text.endswith(('{', '[')):
             post += self.editor.tab_length * ' '
-        if text.endswith(('}', ']')) or not text.endswith(','):
+        elif text.endswith(('}', ']')) or not text.endswith(','):
             post = post[self.editor.tab_length:]
         return pre, post
