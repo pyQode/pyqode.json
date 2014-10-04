@@ -15,8 +15,8 @@ def any(name, alternates):
 def make_json_patterns(fixed_format=True):
     keywords = r"\b" + any(
         "keyword", ["true", "false", "null"]) + r"\b"
-    keys = any('tag', ['"[^"\n]*("|\n):', r"'[^'\n]*('|\n):"])
-    string_vals = any('string', ['"[^"\n]*("|\n)', r"'[^'\n]*('|\n)"])
+    keys = any('tag', ['"[^"\n]*("|\n):'])
+    string_vals = any('string', ['"[^"\n]*("|\n)'])
     numbers = any('number', [
         '\d+(\s*|\.$|$)',
         '[+-]?\d*\.\d+([eE][-+]?\d+)?',
