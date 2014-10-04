@@ -6,8 +6,10 @@ documents by pressing Ctrl+O
 """
 import logging
 import os
+import random
 import sys
 from pyqode.qt import QtWidgets
+from pyqode.core import api, modes
 from pyqode.json.widgets import JSONCodeEdit
 
 
@@ -21,6 +23,10 @@ class Window(QtWidgets.QMainWindow):
         self.editor.file.open(
             os.path.abspath(os.path.join(
                 '..', 'test', 'files', 'example.json')))
+        # pygment_style = random.choice(modes.PYGMENTS_STYLES)
+        # logging.info('pygments style: %s', pygment_style)
+        # self.editor.syntax_highlighter.color_scheme = api.ColorScheme(
+        #     pygment_style)
 
 
 logging.basicConfig(level=logging.INFO)
