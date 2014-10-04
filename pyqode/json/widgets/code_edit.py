@@ -27,13 +27,14 @@ class JSONCodeEdit(api.CodeEdit):
                            Panel.Position.TOP)
 
         # append modes
-        self.modes.append(modes.AutoCompleteMode())
+        self.modes.append(json_modes.AutoCompleteMode())
         self.add_separator()
         self.modes.append(modes.CaseConverterMode())
         self.modes.append(modes.FileWatcherMode())
         self.modes.append(modes.CaretLineHighlighterMode())
         self.sh = self.modes.append(json_modes.JSONSyntaxHighlighter(
             self.document()))
+        self.modes.append(modes.IndenterMode())
         self.modes.append(modes.ZoomMode())
         self.modes.append(modes.CodeCompletionMode())
         self.modes.append(modes.AutoIndentMode())
