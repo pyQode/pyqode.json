@@ -2,7 +2,7 @@ import sys
 from pyqode.core import api, modes, panels
 from pyqode.core.api import Panel
 from pyqode.core.backend import server
-from pyqode.json import modes as json_modes
+from pyqode.json import modes as json_modes, panels as json_panels
 from pyqode.json.api import JSONFoldDetector
 
 
@@ -25,6 +25,7 @@ class JSONCodeEdit(api.CodeEdit):
                            Panel.Position.BOTTOM)
         self.panels.append(panels.EncodingPanel(),
                            Panel.Position.TOP)
+        self.panels.append(json_panels.NavigationPanel(), Panel.Position.TOP)
 
         # append modes
         self.modes.append(json_modes.AutoCompleteMode())
