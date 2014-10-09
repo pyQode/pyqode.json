@@ -12,7 +12,7 @@ class JSONCodeEdit(api.CodeEdit):
     def __init__(self, parent=None,
                  server_script=server.__file__,
                  interpreter=sys.executable, args=None,
-                 create_default_actions=True):
+                 create_default_actions=True, color_scheme='qt'):
         super(JSONCodeEdit, self).__init__(
             parent, create_default_actions=create_default_actions)
 
@@ -34,7 +34,7 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.FileWatcherMode())
         self.modes.append(modes.CaretLineHighlighterMode())
         self.sh = self.modes.append(json_modes.JSONSyntaxHighlighter(
-            self.document()))
+            self.document(), color_scheme=color_scheme))
         self.modes.append(modes.IndenterMode())
         self.modes.append(modes.ZoomMode())
         self.modes.append(modes.CodeCompletionMode())
@@ -46,3 +46,10 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.ExtendedSelectionMode())
 
         self.syntax_highlighter.fold_detector = JSONFoldDetector()
+
+    def clone(self):
+        clone = self.__class__(
+            parent=self.parent(), server_script=self.backend.server_script,
+            interpreter=self.backend.interpreter, args=self.backend.args,
+            color_scheme=self.syntax_highlighter.color_scheme.name)
+        return clone
