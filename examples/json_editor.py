@@ -28,6 +28,17 @@ class Window(QtWidgets.QMainWindow):
         self.editor.syntax_highlighter.color_scheme = api.ColorScheme(
             pygment_style)
 
+        self.action_open = QtWidgets.QAction('open file', self)
+        self.action_open.setShortcut('Ctrl+O')
+        self.action_open.triggered.connect(self.open_file)
+        self.addAction(self.action_open)
+
+    def open_file(self):
+        filename, _ = QtWidgets.QFileDialog.getOpenFileName(
+            self, 'Open JSON file')
+        if filename:
+            self.editor.file.open(filename)
+
 
 logging.basicConfig(level=logging.INFO)
 app = QtWidgets.QApplication(sys.argv)
