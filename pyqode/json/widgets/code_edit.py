@@ -1,6 +1,6 @@
 import sys
 from pyqode.core import api, modes, panels
-from pyqode.core.api import Panel
+from pyqode.core.api import Panel, ColorScheme
 from pyqode.core.backend import server
 from pyqode.json import modes as json_modes, panels as json_panels
 from pyqode.json.api import JSONFoldDetector
@@ -34,7 +34,7 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.FileWatcherMode())
         self.modes.append(modes.CaretLineHighlighterMode())
         self.sh = self.modes.append(json_modes.JSONSyntaxHighlighter(
-            self.document(), color_scheme=color_scheme))
+            self.document(), color_scheme=ColorScheme(color_scheme)))
         self.modes.append(modes.IndenterMode())
         self.modes.append(modes.ZoomMode())
         self.modes.append(modes.CodeCompletionMode())
@@ -44,7 +44,6 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.OccurrencesHighlighterMode())
         self.modes.append(modes.SmartBackSpaceMode())
         self.modes.append(modes.ExtendedSelectionMode())
-
         self.syntax_highlighter.fold_detector = JSONFoldDetector()
 
     def clone(self):
