@@ -25,6 +25,8 @@ navigation panel, code folding,...).
 - `Issue tracker`_
 - `Wiki`_
 - `API reference`_
+- `Contributing`_
+- `Changelog`_
 - `Screenshots`_
 
 Features:
@@ -66,3 +68,5 @@ it out you must clone the git repository and then run
 .. _Wiki: https://github.com/pyQode/pyQode/wiki
 .. _API reference: http://pyqodejson.readthedocs.org/en/latest/
 .. _pyQode: https://github.com/pyQode/pyQode
+.. _Changelog: https://github.com/pyQode/pyqode.json/blob/master/CHANGELOG.md
+.. _Contributing: https://github.com/pyQode/pyqode.json/blob/master/CONTRIBUTING.rst
