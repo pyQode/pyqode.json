@@ -5,9 +5,12 @@ from pyqode.core.api import TextHelper
 class AutoCompleteMode(modes.AutoCompleteMode):
     def __init__(self):
         super(AutoCompleteMode, self).__init__()
-        self.QUOTES_FORMATS.pop("'")
-        self.SELECTED_QUOTES_FORMATS.pop("'")
-        self.MAPPING.pop("'")
+        try:
+            self.QUOTES_FORMATS.pop("'")
+            self.SELECTED_QUOTES_FORMATS.pop("'")
+            self.MAPPING.pop("'")
+        except KeyError:
+            pass
 
     def _on_key_pressed(self, event):
         helper = TextHelper(self.editor)
