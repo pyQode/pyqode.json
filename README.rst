@@ -1,23 +1,30 @@
 .. image:: https://raw.githubusercontent.com/pyQode/pyQode/master/media/pyqode-banner.png
+|
+.. image:: https://pypip.in/version/pyqode.json/badge.svg
+   :target: https://pypi.python.org/pypi/pyqode.json/
+   :alt: Latest PyPI version
+
+.. image:: https://pypip.in/download/pyqode.json/badge.svg
+   :target: https://pypi.python.org/pypi/pyqode.json/
+   :alt: Number of PyPI downloads
+
+.. image:: https://pypip.in/py_versions/pyqode.json/badge.svg
+   :target: https://pypi.python.org/pypi/pyqode.json/
+   :alt: Supported python version
+   
+.. image:: https://pypip.in/license/pyqode.json/badge.svg
+
+.. image:: https://travis-ci.org/pyQode/pyqode.json.svg?branch=master
+   :target: https://travis-ci.org/pyQode/pyqode.json
+   :alt: Travis-CI build status
+
+.. image:: https://coveralls.io/repos/pyQode/pyqode.json/badge.png?branch=master
+   :target: https://coveralls.io/r/pyQode/pyqode.json?branch=master
+   :alt: Coverage Status
 
 
 About
 -----
-.. image:: http://img.shields.io/pypi/v/pyqode.json.png
-    :target: https://pypi.python.org/pypi/pyqode.json/
-    :alt: Latest PyPI version
-
-.. image:: http://img.shields.io/pypi/dm/pyqode.json.png
-    :target: https://pypi.python.org/pypi/pyqode.json/
-    :alt: Number of PyPI downloads
-
-.. image:: https://travis-ci.org/pyQode/pyqode.json.svg?branch=master
-    :target: https://travis-ci.org/pyQode/pyqode.json
-    :alt: Travis-CI build status
-
-.. image:: https://coveralls.io/repos/pyQode/pyqode.json/badge.png?branch=master
-    :target: https://coveralls.io/r/pyQode/pyqode.json?branch=master
-    :alt: Coverage Status
 
 *pyqode.json* adds **JSON** support to `pyQode`_ (syntax highlither,
 navigation panel, code folding,...).
