@@ -115,5 +115,5 @@ class NavigationPanel(Panel):
             line = w.scope.blockNumber()
             th.goto_line(line, column=th.line_indent(line))
             self._lock = False
-            self.editor.setFocus(True)
+            self.editor.setFocus()
 
