@@ -357,4 +357,4 @@ epub_exclude_files = ['search.html']
 
 intersphinx_mapping = {
     'python': ('http://python.readthedocs.org/en/v2.7.2/', None),
-    'pyqodecore': ('http://pyqodecore.readthedocs.org/en/latest/', None)}
+    'pyqode.core': ('https://pythonhosted.org/pyqode.core/', None)}
