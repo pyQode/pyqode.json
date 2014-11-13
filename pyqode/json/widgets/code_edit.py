@@ -7,6 +7,11 @@ from pyqode.json.api import JSONFoldDetector
 
 
 class JSONCodeEdit(api.CodeEdit):
+    """
+    Pre-configure JSON code editor widgets that provides a better support for
+    JSON than :class:`pyqode.core.widgets.GenericCodeEdit`.
+    """
+    #: list of supported mime-types
     mimetypes = ['application/json']
 
     def __init__(self, parent=None,

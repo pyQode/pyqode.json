@@ -1,13 +1,12 @@
 import re
 from pyqode.core.api import Panel, TextHelper, TextBlockHelper, FoldScope
-from pyqode.core.panels import FoldingPanel
 from pyqode.qt import QtCore, QtWidgets
 
 
 class NavigationPanel(Panel):
     """
-    This panel show the position of the curosr in the document by showing
-    the various parent nodes as toggleable buttons.
+    This panel show the position of the cursor in the document by showing
+    the various parent nodes as toggle-able buttons.
     """
     def __init__(self):
         super(NavigationPanel, self).__init__()
@@ -31,6 +30,11 @@ class NavigationPanel(Panel):
 
     @staticmethod
     def extract_node_name(block):
+        """
+        Extracts the name of the node at ``block``
+        :param block: QTextBlock to parse
+        :return: name (str)
+        """
         text = block.text().strip()
         node_name = re.search('"[^"\n]*("|\n):', text)
         if node_name:
@@ -40,6 +44,12 @@ class NavigationPanel(Panel):
 
     @staticmethod
     def get_parent_scopes(block):
+        """
+        Gets the list of hierarchical parent scopes of the current block.
+
+        :param block: current block
+        :return: list of QTextBlock
+        """
         scopes = [block]
         scope = FoldScope.find_parent_scope(block)
         while scope is not None:

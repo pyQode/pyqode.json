@@ -39,9 +39,7 @@ def _logger():
 
 
 class JSONSyntaxHighlighter(BaseSH):
-    """
-    Native cobol highlighter (fixed format).
-    """
+    """ Highlights JSON code in the editor """
     PROG = re.compile(make_json_patterns(), re.S)
 
     def highlight_block(self, text, block):

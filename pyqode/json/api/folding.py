@@ -2,6 +2,9 @@ from pyqode.core.api import FoldDetector, TextBlockHelper
 
 
 class JSONFoldDetector(FoldDetector):
+    """
+    Fold detector specialised to parse JSON documents.
+    """
     def detect_fold_level(self, prev_block, block):
         if prev_block:
             prev_text = prev_block.text().strip()

@@ -3,6 +3,9 @@ from pyqode.core.api import TextHelper
 
 
 class AutoCompleteMode(modes.AutoCompleteMode):
+    """
+    Customised auto complete mode, specialised for JSON.
+    """
     def __init__(self):
         super(AutoCompleteMode, self).__init__()
         try:

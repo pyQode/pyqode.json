@@ -23,10 +23,6 @@ class Window(QtWidgets.QMainWindow):
         self.editor.file.open(
             os.path.abspath(os.path.join(
                 '..', 'test', 'files', 'example.json')))
-        pygment_style = random.choice(modes.PYGMENTS_STYLES)
-        logging.info('pygments style: %s', pygment_style)
-        self.editor.syntax_highlighter.color_scheme = api.ColorScheme(
-            pygment_style)
 
         self.action_open = QtWidgets.QAction('open file', self)
         self.action_open.setShortcut('Ctrl+O')
