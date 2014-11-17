@@ -8,7 +8,7 @@ from pyqode.json.api import JSONFoldDetector
 
 class JSONCodeEdit(api.CodeEdit):
     """
-    Pre-configure JSON code editor widgets that provides a better support for
+    Pre-configured JSON code editor widgets that provides a better support for
     JSON than :class:`pyqode.core.widgets.GenericCodeEdit`.
     """
     #: list of supported mime-types
@@ -31,6 +31,7 @@ class JSONCodeEdit(api.CodeEdit):
         self.panels.append(panels.EncodingPanel(),
                            Panel.Position.TOP)
         self.panels.append(json_panels.NavigationPanel(), Panel.Position.TOP)
+        self.panels.append(panels.CheckerPanel())
 
         # append modes
         self.modes.append(json_modes.AutoCompleteMode())
@@ -49,6 +50,7 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.OccurrencesHighlighterMode())
         self.modes.append(modes.SmartBackSpaceMode())
         self.modes.append(modes.ExtendedSelectionMode())
+        self.modes.append(json_modes.JSONLinter())
         self.syntax_highlighter.fold_detector = JSONFoldDetector()
 
     def clone(self):
