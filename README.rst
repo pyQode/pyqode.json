@@ -26,7 +26,7 @@
 About
 -----
 
-*pyqode.json* adds **JSON** support to `pyQode`_ (syntax highlither,
+*pyqode.json* adds **JSON** support to `pyQode`_ (syntax highlighter,
 navigation panel, code folding,...).
 
 - `Issue tracker`_
