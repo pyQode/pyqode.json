@@ -49,10 +49,5 @@ class JSONSyntaxHighlighter(BaseSH):
             for key, value in list(match.groupdict().items()):
                 if value:
                     start, end = match.span(key)
-                    try:
-                        fmt = self.formats[key]
-                    except KeyError:
-                        _logger().debug('unsupported format: %s' % key)
-                    else:
-                        self.setFormat(start, end - start, fmt)
+                    self.setFormat(start, end - start, self.formats[key])
             match = self.PROG.search(text, match.end())

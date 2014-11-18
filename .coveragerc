@@ -4,6 +4,7 @@ omit =
     # qt design ui files
     *_ui.py
     *_rc.py
+    *pyqode/__init__.py
     *designer_plugin.py
     *pyqode/json/_forms/*
 

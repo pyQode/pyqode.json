@@ -59,3 +59,7 @@ class JSONCodeEdit(api.CodeEdit):
             interpreter=self.backend.interpreter, args=self.backend.args,
             color_scheme=self.syntax_highlighter.color_scheme.name)
         return clone
+
+    def setPlainText(self, txt, mime_type='application/json',
+                     encoding='utf-8'):
+        super(JSONCodeEdit, self).setPlainText(txt, mime_type, encoding)

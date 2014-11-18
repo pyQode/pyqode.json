@@ -48,6 +48,7 @@ logging.basicConfig(level=logging.DEBUG,
 # 2. create qt application
 from pyqode.qt.QtWidgets import QApplication
 _app = QApplication(sys.argv)
+_widget = None
 
 
 # -------------------
@@ -61,7 +62,7 @@ def app(request):
 
 @pytest.fixture()
 def editor(request):
-    global _app
+    global _app, _widget
     from pyqode.core import modes
     from pyqode.json.widgets import JSONCodeEdit
     from pyqode.qt.QtTest import QTest
@@ -70,7 +71,6 @@ def editor(request):
 
     _widget = JSONCodeEdit()
     _widget.resize(800, 600)
-    _widget.show()
     _app.setActiveWindow(_widget)
     while not _widget.backend.connected:
         QTest.qWait(100)
@@ -79,7 +79,8 @@ def editor(request):
     _widget.save_on_focus_out = False
 
     def fin():
-        _widget.backend.stop()
+        global _widget
+        _widget.close()
         while _widget.backend.connected:
             QTest.qWait(100)
         del _widget
