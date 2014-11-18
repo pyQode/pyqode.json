@@ -37,4 +37,4 @@ class JSONLinter(CheckerMode):
     Provides a JSON Linter mode.
     """
     def __init__(self):
-        super().__init__(json_linter)
+        super(JSONLinter, self).__init__(json_linter)
