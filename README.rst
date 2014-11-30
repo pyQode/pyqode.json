@@ -42,7 +42,7 @@ Features:
 * native syntax highlighter
 * specialised code folding detector
 * a pre-configured editor: `pyqode.json.widgets.JSONCodeEdit`
-* navigation panel (show you the current node and its parent and let you
+* navigation panel (show you the current node and its parents and let you
   navigate between them)
 
 License
@@ -62,12 +62,9 @@ pyqode.json depends on the following libraries:
 Installation
 ------------
 
-The package has not been published on pypi yet, if you want to test
-it out you must clone the git repository and then run
-
 ::
 
-    $ pip install .
+    $ pip install pyqode.json --upgrade
 
 
 .. _Screenshots: https://github.com/pyQode/pyQode/wiki/Screenshots-and-videos#pyqodejson-screenshots
@@ -75,5 +72,5 @@ it out you must clone the git repository and then run
 .. _Wiki: https://github.com/pyQode/pyQode/wiki
 .. _API reference: http://pyqodejson.readthedocs.org/en/latest/
 .. _pyQode: https://github.com/pyQode/pyQode
-.. _Changelog: https://github.com/pyQode/pyqode.json/blob/master/CHANGELOG.md
+.. _Changelog: https://github.com/pyQode/pyqode.json/blob/master/CHANGELOG.rst
 .. _Contributing: https://github.com/pyQode/pyqode.json/blob/master/CONTRIBUTING.rst

@@ -53,5 +53,5 @@ Indices and tables
 .. _Wiki: https://github.com/pyQode/pyQode/wiki
 .. _API reference: http://pyqodejson.readthedocs.org/en/latest/
 .. _pyQode: https://github.com/pyQode/pyQode
-.. _Changelog: https://github.com/pyQode/pyqode.json/blob/master/CHANGELOG.md
+.. _Changelog: https://github.com/pyQode/pyqode.json/blob/master/CHANGELOG.rst
 .. _Contributing: https://github.com/pyQode/pyqode.json/blob/master/CONTRIBUTING.rst

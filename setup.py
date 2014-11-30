@@ -4,6 +4,7 @@
 Setup script for pyqode.json
 """
 from setuptools import setup, find_packages
+from pyqode.json import __version__
 #
 # add ``build_ui command`` (optional, for development only)
 # this command requires the following packages:
@@ -17,14 +18,6 @@ except ImportError:
     cmdclass = {}
 
 
-def read_version():
-    with open("pyqode/json/__init__.py") as f:
-        lines = f.read().splitlines()
-        for l in lines:
-            if "__version__" in l:
-                return l.split("=")[1].strip().replace("'", '')
-
-
 def readme():
     return str(open('README.rst').read())
 
@@ -32,7 +25,7 @@ def readme():
 setup(
     name='pyqode.json',
     namespace_packages=['pyqode'],
-    version=read_version(),
+    version=__version__,
     packages=[p for p in find_packages() if 'test' not in p],
     keywords=["Add JSON support to pyQode"],
     url='https://github.com/pyQode/pyqode.json',
