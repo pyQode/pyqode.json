@@ -1,5 +1,7 @@
 .. image:: https://raw.githubusercontent.com/pyQode/pyQode/master/media/pyqode-banner.png
+
 |
+
 .. image:: https://pypip.in/version/pyqode.json/badge.svg
    :target: https://pypi.python.org/pypi/pyqode.json/
    :alt: Latest PyPI version
