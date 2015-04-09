@@ -56,3 +56,8 @@ target/
 
 # PyCharm
 .idea
+
+*.tar.gz
+deb_dist
+*.usr
+*~

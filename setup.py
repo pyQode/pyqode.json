@@ -3,6 +3,7 @@
 """
 Setup script for pyqode.json
 """
+import sys
 from setuptools import setup, find_packages
 from pyqode.json import __version__
 #
@@ -18,7 +19,12 @@ except ImportError:
     cmdclass = {}
 
 
+DESCRIPTION = 'Adds JSon support to pyqode.core'
+
+
 def readme():
+    if 'bdist_deb' in sys.argv:
+        return DESCRIPTION
     return str(open('README.rst').read())
 
 
@@ -27,12 +33,12 @@ setup(
     namespace_packages=['pyqode'],
     version=__version__,
     packages=[p for p in find_packages() if 'test' not in p],
-    keywords=["Add JSON support to pyQode"],
+    keywords=["JSON widget editor"],
     url='https://github.com/pyQode/pyqode.json',
     license='MIT',
     author='Colin Duquesnoy',
     author_email='colin.duquesnoy@gmail.com',
-    description='JSON Code Editor Widget',
+    description=DESCRIPTION,
     long_description=readme(),
     install_requires=['pyqode.core'],
     cmdclass=cmdclass,
