@@ -10,8 +10,7 @@ This scripts configures the test suite. We do two things:
 import logging
 import sys
 import pytest
-
-
+from pyqode.qt.QtWidgets import QApplication
 try:
     import faulthandler
     faulthandler.enable()
@@ -46,7 +45,6 @@ logging.basicConfig(level=logging.DEBUG,
 # Setup QApplication
 # -------------------
 # 2. create qt application
-from pyqode.qt.QtWidgets import QApplication
 _app = QApplication(sys.argv)
 _widget = None
 
