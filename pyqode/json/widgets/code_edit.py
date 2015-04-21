@@ -26,18 +26,17 @@ class JSONCodeEdit(api.CodeEdit):
                            reuse=reuse_backend)
 
         # append panels
-        self.panels.append(panels.FoldingPanel())
-        self.panels.append(panels.LineNumberPanel())
         self.panels.append(panels.SearchAndReplacePanel(),
                            Panel.Position.BOTTOM)
-        self.panels.append(panels.EncodingPanel(),
-                           Panel.Position.TOP)
+        self.panels.append(panels.FoldingPanel())
+        self.panels.append(panels.LineNumberPanel())
         self.panels.append(json_panels.NavigationPanel(), Panel.Position.TOP)
         self.panels.append(panels.CheckerPanel())
 
         # append modes
         self.modes.append(json_modes.AutoCompleteMode())
         self.add_separator()
+        self.modes.append(modes.ExtendedSelectionMode())
         self.modes.append(modes.CaseConverterMode())
         self.modes.append(modes.FileWatcherMode())
         self.modes.append(modes.CaretLineHighlighterMode())
@@ -51,9 +50,11 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(modes.SymbolMatcherMode())
         self.modes.append(modes.OccurrencesHighlighterMode())
         self.modes.append(modes.SmartBackSpaceMode())
-        self.modes.append(modes.ExtendedSelectionMode())
         self.modes.append(json_modes.JSONLinter())
         self.syntax_highlighter.fold_detector = JSONFoldDetector()
+
+        self.panels.append(panels.EncodingPanel(),
+                           Panel.Position.TOP)
 
     def clone(self):
         clone = self.__class__(
