@@ -17,7 +17,7 @@ class JSONCodeEdit(api.CodeEdit):
     def __init__(self, parent=None,
                  server_script=server.__file__,
                  interpreter=sys.executable, args=None,
-                 create_default_actions=True, color_scheme='qt',
+                 create_default_actions=False, color_scheme='qt',
                  reuse_backend=False):
         super(JSONCodeEdit, self).__init__(
             parent, create_default_actions=create_default_actions)
