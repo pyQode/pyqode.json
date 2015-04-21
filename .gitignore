@@ -59,5 +59,10 @@ target/
 
 *.tar.gz
 deb_dist
-*.usr
+
+# gedit temp files
 *~
+
+# hackedit project files
+.hackedit
+
