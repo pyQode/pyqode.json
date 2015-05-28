@@ -2,27 +2,25 @@
 
 |
 
-.. image:: https://pypip.in/version/pyqode.json/badge.svg
+.. image:: https://img.shields.io/pypi/v/pyqode.json.svg
    :target: https://pypi.python.org/pypi/pyqode.json/
    :alt: Latest PyPI version
 
-.. image:: https://pypip.in/download/pyqode.json/badge.svg
+.. image:: https://img.shields.io/pypi/dm/pyqode.json.svg
    :target: https://pypi.python.org/pypi/pyqode.json/
    :alt: Number of PyPI downloads
 
-.. image:: https://pypip.in/py_versions/pyqode.json/badge.svg
-   :target: https://pypi.python.org/pypi/pyqode.json/
-   :alt: Supported python version
-   
-.. image:: https://pypip.in/license/pyqode.json/badge.svg
+.. image:: https://img.shields.io/pypi/l/pyqode.python.svg
 
 .. image:: https://travis-ci.org/pyQode/pyqode.json.svg?branch=master
    :target: https://travis-ci.org/pyQode/pyqode.json
    :alt: Travis-CI build status
 
-.. image:: https://coveralls.io/repos/pyQode/pyqode.json/badge.png?branch=master
+
+.. image:: https://coveralls.io/repos/pyQode/pyqode.json/badge.svg?branch=master
    :target: https://coveralls.io/r/pyQode/pyqode.json?branch=master
    :alt: Coverage Status
+
 
 
 About
