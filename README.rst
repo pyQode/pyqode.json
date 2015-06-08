@@ -66,6 +66,25 @@ Installation
 
     $ pip install pyqode.json --upgrade
 
+Testing
+-------
+
+pyqode.core has a test suite and measure its coverage.
+
+To run the tests, just run runtests.py with the interpreter you want
+to run the test suite::
+
+    python2.7 runtests.py
+    python3.4 runtests.py
+
+To measure coverage, install pytest-cov package and run::
+
+    python runtests.py --cov pyqode
+
+To check for PEP8 warnings, use:
+
+    python runtests.py --pep8 -m pep8
+
 
 .. _Screenshots: https://github.com/pyQode/pyQode/wiki/Screenshots-and-videos#pyqodejson-screenshots
 .. _Issue tracker: https://github.com/pyQode/pyQode/issues
