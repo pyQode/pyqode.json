@@ -1,6 +1,13 @@
 Change log
 ==========
 
+2.6.1
+-----
+
+Fixed bugs:
+    - Fix type error in json linter that lead to a crash of the application if
+      using PyQt 5.5
+
 2.6.0
 ------
 
