@@ -53,8 +53,8 @@ class JSONCodeEdit(api.CodeEdit):
         self.modes.append(json_modes.JSONLinter())
         self.syntax_highlighter.fold_detector = JSONFoldDetector()
 
-        self.panels.append(panels.EncodingPanel(),
-                           Panel.Position.TOP)
+        self.panels.append(panels.EncodingPanel(), Panel.Position.TOP)
+        self.panels.append(panels.ReadOnlyPanel(), Panel.Position.TOP)
 
     def clone(self):
         clone = self.__class__(
