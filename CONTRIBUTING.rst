@@ -12,6 +12,8 @@ Submitting pull requests:
 4) Add your name to AUTHORS.rst under the `Contributors` section.
 5) Push to your fork and submit a pull request to **the master branch**.
 
-Please use **PEP8** to style your code!
+Please use **PEP8** to style your code::
+
+    python setup.py test -a "--pep8 -m pep8"
 
 .. _centralised issue tracker: https://github.com/pyQode/pyQode/issues
