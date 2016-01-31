@@ -9,7 +9,7 @@ def test_toggle_button(editor):
     QTest.qWait(500)
     panel = editor.panels.get('NavigationPanel')
     assert len(panel._widgets) == 4
-    assert panel._widgets[1].text() == 'window'
+    assert panel._widgets[1].text().replace('&', '').lower() == 'window'
     panel._widgets[1].toggled.emit(True)
     QTest.qWait(500)
     assert TextHelper(editor).cursor_position()[0] == 3
