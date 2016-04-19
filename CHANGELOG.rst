@@ -1,6 +1,11 @@
 Change log
 ==========
 
+2.9.0
+-----
+
+Add alternative mimetype (text/x-json) and set create default action to True by default.
+
 2.8.0
 -----
 
